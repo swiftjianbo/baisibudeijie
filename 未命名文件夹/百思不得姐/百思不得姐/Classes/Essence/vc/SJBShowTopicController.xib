@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SJBShowTopicController">
+            <connections>
+                <outlet property="addFriend" destination="wD8-uZ-fCb" id="6aA-r3-OGW"/>
+                <outlet property="bottomConstraint" destination="56u-13-a2t" id="HHe-v6-2LB"/>
+                <outlet property="bottomToolBar" destination="2nP-6v-09S" id="KhM-Sm-Cuh"/>
+                <outlet property="contentTextField" destination="e2M-yP-44w" id="IPi-8O-Qjl"/>
+                <outlet property="sendVoice" destination="hze-KH-Ge7" id="zyh-Lm-XFp"/>
+                <outlet property="tableView" destination="45Z-4f-xMz" id="Jlw-8A-pGl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="45Z-4f-xMz" userLabel="表格">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="VfT-FD-viS"/>
+                        <outlet property="delegate" destination="-1" id="SVr-HD-tqr"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nP-6v-09S" userLabel="底部工具栏">
+                    <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hze-KH-Ge7" userLabel="发语音">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="aCg-ix-Bcx"/>
+                                <constraint firstAttribute="width" constant="44" id="zJJ-2H-jHt"/>
+                            </constraints>
+                            <state key="normal" image="comment-bar-voice"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wD8-uZ-fCb" userLabel="添加关注人">
+                            <rect key="frame" x="276" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="hrM-35-2Wb"/>
+                                <constraint firstAttribute="width" constant="44" id="rSa-IY-OuR"/>
+                            </constraints>
+                            <state key="normal" image="comment-bar-voice"/>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="写评论..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e2M-yP-44w">
+                            <rect key="frame" x="51" y="7" width="218" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="BtZ-1M-2yz"/>
+                        <constraint firstItem="e2M-yP-44w" firstAttribute="leading" secondItem="hze-KH-Ge7" secondAttribute="trailing" constant="7" id="Lgq-z0-j3A"/>
+                        <constraint firstItem="hze-KH-Ge7" firstAttribute="leading" secondItem="2nP-6v-09S" secondAttribute="leading" id="aTy-Ki-Nvi"/>
+                        <constraint firstAttribute="trailing" secondItem="wD8-uZ-fCb" secondAttribute="trailing" id="agU-KM-s3S"/>
+                        <constraint firstAttribute="bottom" secondItem="wD8-uZ-fCb" secondAttribute="bottom" id="bTp-cE-U6b"/>
+                        <constraint firstItem="wD8-uZ-fCb" firstAttribute="leading" secondItem="e2M-yP-44w" secondAttribute="trailing" constant="7" id="bXH-nG-mDA"/>
+                        <constraint firstAttribute="bottom" secondItem="hze-KH-Ge7" secondAttribute="bottom" id="n3W-S3-hx5"/>
+                        <constraint firstItem="e2M-yP-44w" firstAttribute="top" secondItem="2nP-6v-09S" secondAttribute="top" constant="7" id="pva-Ra-8LN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="2nP-6v-09S" secondAttribute="bottom" id="56u-13-a2t"/>
+                <constraint firstItem="45Z-4f-xMz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7EF-YM-E5y"/>
+                <constraint firstItem="45Z-4f-xMz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8wW-r7-i7y"/>
+                <constraint firstAttribute="trailing" secondItem="45Z-4f-xMz" secondAttribute="trailing" id="BwF-t7-Uj8"/>
+                <constraint firstItem="2nP-6v-09S" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ky7-7N-3lB"/>
+                <constraint firstItem="2nP-6v-09S" firstAttribute="top" secondItem="45Z-4f-xMz" secondAttribute="bottom" id="L5B-Zq-Xqg"/>
+                <constraint firstAttribute="trailing" secondItem="2nP-6v-09S" secondAttribute="trailing" id="hj0-ij-VvU"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="comment-bar-voice" width="29" height="29"/>
+    </resources>
+</document>
